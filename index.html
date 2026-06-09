@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
 
 :root {
   --bg: #0A0A0A;
@@ -236,7 +238,7 @@ section {
 /* ABOUT */
 .about-grid {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 260px minmax(0, 1fr);
   gap: 56px;
   align-items: start;
 }
@@ -273,7 +275,7 @@ section {
 }
 .strength-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   margin-top: 0;
 }
@@ -342,7 +344,7 @@ section {
 .work-row {
   position: relative;
   display: grid;
-  grid-template-columns: 120px 1fr 160px;
+  grid-template-columns: 120px minmax(0, 1fr) 160px;
   gap: 48px;
   align-items: start;
   padding: 44px 0;
@@ -440,7 +442,7 @@ section {
 .timeline { display: flex; flex-direction: column; gap: 0; }
 .timeline-row {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px minmax(0, 1fr);
   gap: 60px;
   padding: 40px 0;
   border-bottom: 1px solid var(--border);
@@ -566,7 +568,7 @@ section {
 /* SKILLS */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2px;
   margin-top: 0;
   border: 1px solid var(--border);
@@ -644,9 +646,9 @@ footer {
 @media (max-width: 768px) {
   #hero { padding: 0 24px; }
   section { padding: 80px 24px; }
-  .hero-corner.tl { left: 24px; top: 24px; }
+  .hero-corner.tl { left: 24px; top: 24px; max-width: calc(100% - 80px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .hero-corner.tr { right: 24px; top: 24px; }
-  .hero-corner.bl { left: 24px; bottom: 24px; font-size: 13px; max-width: 420px; }
+  .hero-corner.bl { left: 24px; bottom: 24px; font-size: 13px; max-width: calc(100% - 80px); }
   .hero-corner.br { right: 24px; bottom: 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-blockquote { font-size: 18px; }
@@ -665,7 +667,7 @@ footer {
   .hero-line { font-size: clamp(56px, 15vw, 80px); }
   .section-display { font-size: clamp(40px, 12vw, 56px); }
   .contact-split { font-size: clamp(48px, 13vw, 64px); }
-  .hero-corner.bl { font-size: 12px; max-width: calc(100vw - 48px); line-height: 1.5; }
+  .hero-corner.bl { font-size: 12px; max-width: calc(100vw - 100px); line-height: 1.5; }
   .about-blockquote { font-size: 17px; padding-left: 20px; }
   .strength-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
@@ -736,7 +738,7 @@ footer {
 
   <!-- STRENGTH GRID -->
   <div style="margin-top:56px;">
-      <div class="strength-grid" style="grid-template-columns: repeat(4,1fr);">
+      <div class="strength-grid">
         <div class="strength-card">
           <div class="card-icon">01</div>
           <h4>이상 탐지 · RUL 예측</h4>
@@ -1335,10 +1337,10 @@ document.querySelectorAll('.company-header').forEach((el, i) => {
 });
 
 document.querySelectorAll('.work-row').forEach((row, i) => {
-  gsap.set(row, { x: -20 });
+  gsap.set(row, { y: 20 });
   gsap.to(row, {
     scrollTrigger: { trigger: row, start: 'top 88%', once: true },
-    opacity: 1, x: 0, duration: 0.7, ease: 'power3.out', delay: i * 0.07
+    opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: i * 0.07
   });
 });
 
