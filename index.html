@@ -228,6 +228,7 @@ section {
 .section-display {
   font-size: clamp(56px, 7vw, 96px);
   font-weight: 900;
+  word-break: break-word;
   line-height: 0.9;
   letter-spacing: -0.03em;
   color: var(--text-primary);
@@ -1050,7 +1051,7 @@ footer {
 <!-- EDUCATION -->
 <section id="education">
   <div class="section-label">03 — Education</div>
-  <div class="section-display">EDUCA<br>TION.</div>
+  <div class="section-display">EDUCATION.</div>
 
   <div class="works-list">
 
@@ -1110,7 +1111,7 @@ footer {
 <!-- RESEARCH -->
 <section id="research">
   <div class="section-label">04 — Research</div>
-  <div class="section-display">RESEA<br>RCH.</div>
+  <div class="section-display">RESEARCH.</div>
 
   <div class="works-list">
 
@@ -1169,7 +1170,7 @@ footer {
 <!-- PUBLICATIONS -->
 <section id="publications">
   <div class="section-label">05 — Publications</div>
-  <div class="section-display">PUB<br>LISH.</div>
+  <div class="section-display">PUBLISH.</div>
 
   <div style="display:flex; align-items:stretch; gap:1px; background:var(--border); border:1px solid var(--border); width:fit-content; margin-bottom:60px;">
     <div style="background:var(--bg-card); padding:20px 32px; text-align:center;">
@@ -1659,9 +1660,4 @@ if (magBtnEl) {
     gsap.to(magBtnEl, { x: dx, y: dy, duration: 0.3, ease: 'power2.out' });
   });
   magBtnEl.addEventListener('mouseleave', () => {
-    gsap.to(magBtnEl, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1,0.4)' });
-  });
-}
-</script>
-</body>
-</html>
+    gsap.to(magBtnEl, { x: 0, y: 0, duration: 
