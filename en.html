@@ -1610,38 +1610,3 @@ if (magBtnEl) {
 </script>
 </body>
 </html>
-onUpdate() { el.textContent = Math.round(obj.val); }
-      });
-    }
-  });
-});
-
-document.querySelectorAll('.timeline-row').forEach((row, i) => {
-  gsap.set(row, { y: 20 });
-  gsap.to(row, {
-    scrollTrigger: { trigger: row, start: 'top 88%', once: true },
-    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: i * 0.1
-  });
-});
-
-const contactSplit = document.querySelector('.contact-split');
-if (contactSplit) { gsap.set(contactSplit, { y: 40 }); reveal(contactSplit, { duration: 1.0, ease: 'power3.out' }); }
-const magBtnEl = document.getElementById('magnetic-btn');
-if (magBtnEl) { gsap.set(magBtnEl, { y: 20 }); reveal(magBtnEl, { duration: 0.8, ease: 'power3.out', delay: 0.2 }); }
-const contactLinks = document.querySelector('.contact-links');
-if (contactLinks) { gsap.set(contactLinks, { y: 20 }); reveal(contactLinks, { duration: 0.8, ease: 'power3.out', delay: 0.35 }); }
-
-if (magBtnEl) {
-  magBtnEl.addEventListener('mousemove', e => {
-    const r = magBtnEl.getBoundingClientRect();
-    const dx = (e.clientX - (r.left + r.width  / 2)) * 0.35;
-    const dy = (e.clientY - (r.top  + r.height / 2)) * 0.35;
-    gsap.to(magBtnEl, { x: dx, y: dy, duration: 0.3, ease: 'power2.out' });
-  });
-  magBtnEl.addEventListener('mouseleave', () => {
-    gsap.to(magBtnEl, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1,0.4)' });
-  });
-}
-</script>
-</body>
-</html>
