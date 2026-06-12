@@ -943,18 +943,34 @@ footer {
       </div>
 
       <div class="work-row" onclick="window.open('https://drive.google.com/drive/folders/1fmoHesSf4M0G5QnNX0PhTTzcW887YLxV','_blank')" title="포트폴리오 보기 ↗">
-        <div class="work-label">2024–2026</div>
+        <div class="work-label">2025–2026</div>
         <div>
           <div class="work-title">제조 특화 SLM 개발</div>
           <div class="work-org">SW솔루션팀 &nbsp;·&nbsp; 주임연구원 (산학 PM)</div>
-          <div class="work-desc">경희대-한화모멘텀 산학협력 프로젝트 PM<br>LangChain RAG · vLLM 멀티GPU 서빙 · OPC-UA 연동 · STT/TTS 통합 시스템 개발<br>제조 현장 음성 질의 LLM 서비스 구축 (레시피 최적화 18h → 4h)</div>
+          <div class="work-desc">경희대-한화모멘텀 산학협력 프로젝트 PM<br>LangChain RAG · vLLM 멀티GPU 서빙(4bit 양자화) · OPC-UA 연동 · STT/TTS 통합 시스템 개발<br>PDF·Word·Excel·PPT 멀티포맷 로더 및 실시간 알람 자동화 응답 프로토타입 완성</div>
           <div class="work-tags">
             <span class="work-tag">vLLM</span><span class="work-tag">LangChain</span><span class="work-tag">RAG</span><span class="work-tag">Chroma</span><span class="work-tag">OPC-UA</span><span class="work-tag">STT/TTS</span>
           </div>
         </div>
         <div class="work-kpi-block">
+          <div class="kpi-number" style="font-size:20px; color:var(--accent); line-height:1.4;">산학<br>PM</div>
+          <div class="kpi-label">경희대·한화<br>산학협력<br>프로젝트 리더</div>
+        </div>
+      </div>
+
+      <div class="work-row" onclick="window.open('https://drive.google.com/drive/folders/1fmoHesSf4M0G5QnNX0PhTTzcW887YLxV','_blank')" title="포트폴리오 보기 ↗">
+        <div class="work-label">2024–2025</div>
+        <div>
+          <div class="work-title">Multi-Step Furnace 레시피 추천 시스템</div>
+          <div class="work-org">SW솔루션팀 &nbsp;·&nbsp; 주임연구원</div>
+          <div class="work-desc">디스플레이 제조 설비 온도 데이터 EDA 및 공정 스텝별 패턴 분석<br>예측 모델 기반 시뮬레이션으로 최적 레시피 자동 도출<br>HMI 연동 추천 시스템 구현 · 최적화 소요 시간 18h → 4h 단축</div>
+          <div class="work-tags">
+            <span class="work-tag">공정 최적화</span><span class="work-tag">Simulation</span><span class="work-tag">HMI</span><span class="work-tag">FastAPI</span><span class="work-tag">디스플레이 제조</span>
+          </div>
+        </div>
+        <div class="work-kpi-block">
           <div class="kpi-number" data-target="78">0</div>
-          <div class="kpi-label">레시피 최적화<br>시간 단축 %<br><small style="font-size:10px">(18h→4h)</small></div>
+          <div class="kpi-label">최적화 시간<br>단축 %<br><small style="font-size:10px">(18h→4h)</small></div>
         </div>
       </div>
     </div>
@@ -969,11 +985,11 @@ footer {
       <div class="work-row" onclick="window.open('https://drive.google.com/drive/folders/12TbhW6L_xT9N35EUiH8PlOH7JVE4dsXD','_blank')" title="포트폴리오 보기 ↗">
         <div class="work-label">2022–2024</div>
         <div>
-          <div class="work-title">반도체 이상 탐지 서비스</div>
+          <div class="work-title">반도체 이상 탐지 · 파이프라인 자동화</div>
           <div class="work-org">SW솔루션팀 &nbsp;·&nbsp; 주임연구원</div>
-          <div class="work-desc">ALD/PECVD 설비 대상 CNN-AE(VGG16) 이상감지 서비스 8건 구축<br>LSTM-AE 고도화로 F1 스코어 +16.06%p 향상<br>MongoDB 기반 AI 모델 파이프라인 자동 생성 설계</div>
+          <div class="work-desc">ALD/PECVD 설비 CNN-AE(VGG16) 이상감지 서비스 8건 구축<br>LSTM-AE 구조·파라미터 최적화 (6개 Test Case) → F1 Score +16.06%p<br>데이터 추출 → 전처리 → 학습 → Pipeline 생성 전 과정 자동화 (MongoDB)</div>
           <div class="work-tags">
-            <span class="work-tag">CNN-AE</span><span class="work-tag">VGG16</span><span class="work-tag">LSTM-AE</span><span class="work-tag">MongoDB</span><span class="work-tag">FastAPI</span>
+            <span class="work-tag">CNN-AE</span><span class="work-tag">VGG16</span><span class="work-tag">LSTM-AE</span><span class="work-tag">Continual Learning</span><span class="work-tag">MongoDB</span><span class="work-tag">FastAPI</span>
           </div>
         </div>
         <div class="work-kpi-block">
@@ -987,14 +1003,30 @@ footer {
         <div>
           <div class="work-title">RUL 예측 시스템</div>
           <div class="work-org">SW솔루션팀 &nbsp;·&nbsp; 주임연구원</div>
-          <div class="work-desc">물리 기반 + 데이터 기반 하이브리드 RUL 예측 모델 개발<br>5종 38개 부품 대상 잔존 수명 예측 시스템 구축<br>Flask + Celery 기반 Front/Back-end 서비스 배포</div>
+          <div class="work-desc">물리 기반 3종(Particle Filter · MCMC · NLS) + 데이터 기반 2종(SVR · GPR) 하이브리드 모델 개발<br>5종 38개 부품 대상 잔존 수명 예측 서비스 구축<br>HTML/JS 시각화 UI + MongoDB · Celery 기반 Back-end 직접 개발</div>
           <div class="work-tags">
-            <span class="work-tag">LSTM</span><span class="work-tag">물리 기반</span><span class="work-tag">Flask</span><span class="work-tag">Celery</span><span class="work-tag">PHM</span>
+            <span class="work-tag">Particle Filter</span><span class="work-tag">SVR</span><span class="work-tag">GPR</span><span class="work-tag">Flask</span><span class="work-tag">Celery</span><span class="work-tag">PHM</span>
           </div>
         </div>
         <div class="work-kpi-block">
           <div class="kpi-number" data-target="38">0</div>
           <div class="kpi-label">예측 대상<br>부품 수</div>
+        </div>
+      </div>
+
+      <div class="work-row" onclick="window.open('https://drive.google.com/drive/folders/12TbhW6L_xT9N35EUiH8PlOH7JVE4dsXD','_blank')" title="포트폴리오 보기 ↗">
+        <div class="work-label">2024.03–<br>2024.05</div>
+        <div>
+          <div class="work-title">하림 온라인물류센터 WCS</div>
+          <div class="work-org">SW솔루션팀 &nbsp;·&nbsp; 주임연구원 (단기 과제)</div>
+          <div class="work-desc">익산 하림 OLC 물류 자동화 WCS 단기 개발 과제<br>AS/RS · Mini-load · Gantry 대상 Rule-based 적치 최적화 로직 설계<br>알고리즘 개발 완료 후 담당 팀 인수인계</div>
+          <div class="work-tags">
+            <span class="work-tag">WCS</span><span class="work-tag">Rule-based</span><span class="work-tag">AS/RS</span><span class="work-tag">물류 자동화</span>
+          </div>
+        </div>
+        <div class="work-kpi-block">
+          <div class="kpi-number" style="font-size:20px; color:var(--accent); line-height:1.4;">WCS</div>
+          <div class="kpi-label">물류 자동화<br>솔루션</div>
         </div>
       </div>
     </div>
