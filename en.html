@@ -228,6 +228,7 @@ section {
 .section-display {
   font-size: clamp(56px, 7vw, 96px);
   font-weight: 900;
+  word-break: break-word;
   line-height: 0.9;
   letter-spacing: -0.03em;
   color: var(--text-primary);
@@ -497,6 +498,58 @@ section {
   font-size: 12px;
 }
 
+/* CREDENTIALS & AWARDS */
+.creds-grid {
+  margin-top: 100px;
+  border-top: 1px solid var(--border);
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.creds-panel {
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+.creds-panel + .creds-panel {
+  border-left: none;
+}
+.award-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  padding: 14px 0;
+  gap: 20px;
+}
+.award-date {
+  font-size: 11px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  padding-top: 2px;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 600px) {
+  .creds-grid {
+    grid-template-columns: 1fr;
+  }
+  .creds-panel + .creds-panel {
+    border-left: 1px solid var(--border);
+    border-top: none;
+  }
+  .creds-panel {
+    padding: 28px 20px;
+  }
+  .award-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .award-date {
+    white-space: normal;
+    font-size: 10px;
+  }
+}
+
 /* EDUCATION */
 .edu-section { margin-top: 80px; }
 .edu-label {
@@ -684,6 +737,7 @@ footer {
 <div id="lang-toggle">
   <a href="index.html">KO</a>
   <a href="en.html" class="active">EN</a>
+  <a href="ja.html">JA</a>
 </div>
 
 <!-- PROGRESS BAR -->
@@ -974,10 +1028,69 @@ footer {
 </section>
 
 
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-label">03 — Education</div>
+  <div class="section-display">EDUCATION.</div>
+
+  <div class="works-list">
+
+    <!-- Ph.D. Candidate -->
+    <div class="work-row" style="cursor:default;">
+      <div class="work-label">2026.04 –<br>Present</div>
+      <div>
+        <div class="work-title">Ph.D. Candidate</div>
+        <div class="work-org">Kyung Hee University &nbsp;·&nbsp; Dept. of Big Data Applied Science</div>
+        <div class="work-desc">
+          AI &amp; big data-driven manufacturing intelligence research<br>
+          Semiconductor fab scheduling optimization &amp; process mining (SK hynix industry-academia project)<br>
+          Generative AI-based conversational process monitoring system development
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">DES Simulation</span><span class="work-tag">Process Mining</span><span class="work-tag">Generative AI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- M.Eng. -->
+    <div class="work-row" style="cursor:default;">
+      <div class="work-label">2018.03 –<br>2020.02</div>
+      <div>
+        <div class="work-title">Master of Engineering (M.Eng.)</div>
+        <div class="work-org">Kyung Hee University &nbsp;·&nbsp; Dept. of Industrial &amp; Management Engineering &nbsp;·&nbsp; GPA 3.9 / 4.3</div>
+        <div class="work-desc">
+          Thesis: Hierarchical clustering + TSP-based robot path optimization for automotive weld points<br>
+          54% path time reduction (946s → 437s) · 2 industry-academia projects with Hyundai Kia Automotive<br>
+          Best Paper Award, 8th Industrial Convergence Symposium (KIIE)
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">Hierarchical Clustering</span><span class="work-tag">TSP</span><span class="work-tag">Welding Robot</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- B.Eng. + BBA -->
+    <div class="work-row" style="cursor:default;">
+      <div class="work-label">2012.03 –<br>2018.02</div>
+      <div>
+        <div class="work-title">B.Eng. + Bachelor of Business Admin (Double Major)</div>
+        <div class="work-org">Kyung Hee University &nbsp;·&nbsp; Industrial &amp; Management Engineering / Business Admin &nbsp;·&nbsp; GPA 3.5 / 4.3</div>
+        <div class="work-desc">
+          Capstone: GPS-based text mining Android app development · Patent filed
+        </div>
+        <div class="work-tags">
+          <span class="work-tag">Android</span><span class="work-tag">Text Mining</span><span class="work-tag">Patent Filed</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- RESEARCH -->
 <section id="research">
   <div class="section-label">04 — Research</div>
-  <div class="section-display">RESEA<br>RCH.</div>
+  <div class="section-display">RESEARCH.</div>
 
   <div class="works-list">
 
@@ -1035,13 +1148,138 @@ footer {
   </div>
 </section>
 
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-label">05 — Publications</div>
+  <div class="section-display">PUBLISH.</div>
+
+  <div style="display:flex; align-items:stretch; gap:1px; background:var(--border); border:1px solid var(--border); width:fit-content; margin-bottom:60px;">
+    <div style="background:var(--bg-card); padding:20px 32px; text-align:center;">
+      <div style="font-size:32px; font-weight:900; color:var(--text-primary); line-height:1;">8</div>
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-secondary); margin-top:6px;">Total Papers</div>
+    </div>
+    <div style="background:var(--bg-card); padding:20px 32px; text-align:center;">
+      <div style="font-size:32px; font-weight:900; color:var(--accent); line-height:1;">1</div>
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-secondary); margin-top:6px;">Scopus</div>
+    </div>
+    <div style="background:var(--bg-card); padding:20px 32px; text-align:center;">
+      <div style="font-size:32px; font-weight:900; color:var(--text-primary); line-height:1;">7</div>
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-secondary); margin-top:6px;">Domestic</div>
+    </div>
+    <div style="background:var(--bg-card); padding:20px 32px; text-align:center;">
+      <div style="font-size:32px; font-weight:900; color:var(--text-primary); line-height:1;">5</div>
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-secondary); margin-top:6px;">Citations</div>
+    </div>
+    <a href="https://scholar.google.com/citations?user=f5RVjOMAAAAJ&hl=ko" target="_blank" style="background:var(--bg-card); padding:20px 32px; text-align:center; text-decoration:none; display:flex; flex-direction:column; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='var(--accent)'" onmouseout="this.style.background='var(--bg-card)'">
+      <div style="font-size:18px; font-weight:900; color:var(--accent); line-height:1; transition:color 0.2s;" class="scholar-arrow">↗</div>
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-secondary); margin-top:6px;">Scholar</div>
+    </a>
+  </div>
+
+  <div class="works-list" style="margin-top:40px;">
+
+    <div class="work-row" style="grid-template-columns:120px minmax(0,1fr) 120px;">
+      <div class="work-label">Domestic<br>2026</div>
+      <div>
+        <div class="work-title" style="font-size:18px;">Development of a Generative AI-Based Conversational Process Monitoring Support System</div>
+        <div class="work-org">MW Baek et al.</div>
+        <div class="work-desc">Korea Digital Industry Association, Spring Joint Conference 2026, pp.129–130 &nbsp;·&nbsp; <strong style="color:var(--accent);">Best Paper Award</strong></div>
+        <div class="work-tags" style="margin-top:10px;">
+          <span class="work-tag">Generative AI</span><span class="work-tag">Process Monitoring</span><span class="work-tag">Conversational System</span><span class="work-tag">Best Paper Award</span>
+        </div>
+      </div>
+      <div class="work-kpi-block" style="display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:11px; color:var(--accent); text-align:center; line-height:1.6; font-weight:700;">2026.04.25<br>Best Paper</div>
+      </div>
+    </div>
+
+    <div class="work-row" style="grid-template-columns:120px minmax(0,1fr) 120px;">
+      <div class="work-label">Scopus<br>2020</div>
+      <div>
+        <div class="work-title" style="font-size:18px;">Wind power generation prediction based on weather forecast data using deep neural networks</div>
+        <div class="work-org">MW Baek, MK Sim, JY Jung</div>
+        <div class="work-desc">ICIC Express Letters 11(9), 863–868</div>
+        <div class="work-tags" style="margin-top:10px;">
+          <span class="work-tag">Scopus</span><span class="work-tag">DNN</span><span class="work-tag">Wind Power Prediction</span><span class="work-tag">5 Citations</span>
+        </div>
+      </div>
+      <div class="work-kpi-block">
+        <div class="kpi-number" data-target="5">0</div>
+        <div class="kpi-label">Citations</div>
+      </div>
+    </div>
+
+    <div class="work-row" style="grid-template-columns:120px minmax(0,1fr) 120px;">
+      <div class="work-label">Domestic<br>2022</div>
+      <div>
+        <div class="work-title" style="font-size:18px;">Anomaly Detection from Manufacturing Equipment Data Using Autoencoder</div>
+        <div class="work-org">JH Choi, MW Baek</div>
+        <div class="work-desc">Korean Institute of Industrial Engineers, Spring Joint Conference, 2022</div>
+        <div class="work-tags" style="margin-top:10px;">
+          <span class="work-tag">Autoencoder</span><span class="work-tag">Anomaly Detection</span><span class="work-tag">Manufacturing</span>
+        </div>
+      </div>
+      <div class="work-kpi-block" style="display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:11px; color:var(--text-secondary); text-align:center; line-height:1.6;">KIIE</div>
+      </div>
+    </div>
+
+    <div class="work-row" style="grid-template-columns:120px minmax(0,1fr) 120px;">
+      <div class="work-label">Domestic<br>2022</div>
+      <div>
+        <div class="work-title" style="font-size:18px;">Drive Shaft Case Depth Prediction Using Process and Quality Inspection Data via Machine Learning</div>
+        <div class="work-org">JH Choi, MW Baek</div>
+        <div class="work-desc">Korean Institute of Industrial Engineers, Spring Joint Conference, 2022</div>
+        <div class="work-tags" style="margin-top:10px;">
+          <span class="work-tag">ML</span><span class="work-tag">Quality Prediction</span><span class="work-tag">Drive Shaft</span>
+        </div>
+      </div>
+      <div class="work-kpi-block" style="display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:11px; color:var(--text-secondary); text-align:center; line-height:1.6;">KIIE</div>
+      </div>
+    </div>
+
+    <div class="work-row" style="grid-template-columns:120px minmax(0,1fr) 120px;">
+      <div class="work-label">Domestic<br>2021</div>
+      <div>
+        <div class="work-title" style="font-size:18px;">Fault Diagnosis of Cold Forging Former Equipment Based on Sensor Data</div>
+        <div class="work-org">MW Baek, JH Choi, BH Song</div>
+        <div class="work-desc">Korean Society of Manufacturing Technology Engineers, Conference, 2021</div>
+        <div class="work-tags" style="margin-top:10px;">
+          <span class="work-tag">Sensor Data</span><span class="work-tag">Fault Diagnosis</span><span class="work-tag">Cold Forging</span>
+        </div>
+      </div>
+      <div class="work-kpi-block" style="display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:11px; color:var(--text-secondary); text-align:center; line-height:1.6;">KSMTE</div>
+      </div>
+    </div>
+
+    <div class="work-row" style="grid-template-columns:120px minmax(0,1fr) 120px;">
+      <div class="work-label">Domestic<br>2021</div>
+      <div>
+        <div class="work-title" style="font-size:18px;">Edge AI Architecture for Manufacturing Data Analysis in SMEs</div>
+        <div class="work-org">JS Lee, JH Choi, MW Baek et al.</div>
+        <div class="work-desc">Korean Institute of Industrial Engineers, Spring Joint Conference, 2021</div>
+        <div class="work-tags" style="margin-top:10px;">
+          <span class="work-tag">Edge AI</span><span class="work-tag">Manufacturing Data</span><span class="work-tag">Architecture</span>
+        </div>
+      </div>
+      <div class="work-kpi-block" style="display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:11px; color:var(--text-secondary); text-align:center; line-height:1.6;">KIIE</div>
+      </div>
+    </div>
+
+    <div class="work-row" style="grid-t
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">05 — Contact</div>
+  <div class="section-label">06 — Contact</div>
   <div class="contact-split">
     LET&#39;S<br><span class="talk">TALK.</span>
   </div>
-  <a href="mailto:bjh713@naver.com" class="magnetic-btn" id="magnetic-btn">
+  <a href="#" class="magnetic-btn" id="magnetic-btn" onclick="(function(e){e.preventDefault();var u='bjh713',d='naver.com';window.location.href='mailto:'+u+'@'+d;})(event)">
     <span>Send a Message</span>
     <span>→</span>
   </a>
@@ -1049,7 +1287,7 @@ footer {
     <a href="https://www.linkedin.com/in/bjh713/" target="_blank">LinkedIn</a>
     <a href="https://github.com/whitekun91" target="_blank">GitHub</a>
     <a href="https://scholar.google.com/citations?user=f5RVjOMAAAAJ&hl=ko" target="_blank">Google Scholar</a>
-    <a href="mailto:bjh713@naver.com">Email</a>
+    <a href="#" onclick="(function(e){e.preventDefault();var u='bjh713',d='naver.com';window.location.href='mailto:'+u+'@'+d;})(event)">Email</a>
   </div>
 </section>
 
@@ -1058,12 +1296,13 @@ footer {
   <span style="letter-spacing:0.1em;">AI ENGINEER · SEMICONDUCTOR AI · PHD @ KYUNGHEE</span>
 </footer>
 
+</div><!-- /.main-content -->
 
 <script>
 (function() {
   const canvas = document.getElementById('particle-canvas');
   const ctx = canvas.getContext('2d');
-  const ACCENT = '0,212,255'; // --accent rgb
+  const ACCENT = '0,212,255';
   let W, H, particles, mouse = { x: -9999, y: -9999 };
 
   const CONFIG = {
@@ -1089,7 +1328,6 @@ footer {
   }
 
   Particle.prototype.update = function() {
-    // mouse repulsion
     const dx = this.x - mouse.x;
     const dy = this.y - mouse.y;
     const dist = Math.sqrt(dx * dx + dy * dy);
@@ -1098,10 +1336,8 @@ footer {
       this.vx += dx / dist * force * CONFIG.mouseForce * 8;
       this.vy += dy / dist * force * CONFIG.mouseForce * 8;
     }
-    // dampen
     this.vx *= 0.99;
     this.vy *= 0.99;
-    // clamp speed
     const spd = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
     if (spd > CONFIG.speed * 3) { this.vx *= CONFIG.speed * 3 / spd; this.vy *= CONFIG.speed * 3 / spd; }
 
@@ -1120,8 +1356,6 @@ footer {
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
-
-    // draw connections
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
@@ -1138,8 +1372,6 @@ footer {
         }
       }
     }
-
-    // draw dots
     particles.forEach(p => {
       p.update();
       ctx.beginPath();
@@ -1147,13 +1379,10 @@ footer {
       ctx.fillStyle = `rgba(${ACCENT}, 0.7)`;
       ctx.fill();
     });
-
     requestAnimationFrame(draw);
   }
 
   window.addEventListener('resize', () => { resize(); });
-
-  // mouse tracking (hero only)
   document.getElementById('hero').addEventListener('mousemove', e => {
     const rect = canvas.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
@@ -1162,7 +1391,6 @@ footer {
   document.getElementById('hero').addEventListener('mouseleave', () => {
     mouse.x = -9999; mouse.y = -9999;
   });
-
   init();
   draw();
 })();
@@ -1197,32 +1425,25 @@ footer {
   function draw() {
     ctx.clearRect(0, 0, W, H);
     t += WAVE_SPEED;
-
     dots.forEach(d => {
-      // wave displacement
       const wave = Math.sin(d.bx * 0.018 + d.by * 0.012 + t * 6) * WAVE_AMP;
       const x = d.bx + wave * 0.5;
       const y = d.by + wave;
-
-      // mouse proximity
       const dx = x - mouse.x;
       const dy = y - mouse.y;
       const dist = Math.sqrt(dx*dx + dy*dy);
       const proximity = Math.max(0, 1 - dist / 120);
       const r = DOT_BASE + proximity * 2.5;
       const alpha = 0.18 + proximity * 0.5;
-
       ctx.beginPath();
       ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(${ACCENT}, ${alpha})`;
       ctx.fill();
     });
-
     requestAnimationFrame(draw);
   }
 
   window.addEventListener('resize', resize);
-
   document.getElementById('hero').addEventListener('mousemove', e => {
     const rect = canvas.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
@@ -1231,13 +1452,10 @@ footer {
   document.getElementById('hero').addEventListener('mouseleave', () => {
     mouse.x = -9999; mouse.y = -9999;
   });
-
   resize();
   draw();
 })();
 </script>
-
-
 
 
 <!-- GSAP CDN -->
@@ -1345,7 +1563,7 @@ document.querySelectorAll('.work-row').forEach((row, i) => {
 });
 
 document.querySelectorAll('.kpi-number').forEach(el => {
-  if (!el.dataset.target) return; // data-target 없으면 skip
+  if (!el.dataset.target) return;
   const target = parseInt(el.dataset.target, 10);
   if (isNaN(target)) return;
   let triggered = false;
@@ -1358,6 +1576,41 @@ document.querySelectorAll('.kpi-number').forEach(el => {
       gsap.to(obj, {
         val: target, duration: 2, ease: 'power2.out',
         onUpdate() { el.textContent = Math.round(obj.val); }
+      });
+    }
+  });
+});
+
+document.querySelectorAll('.timeline-row').forEach((row, i) => {
+  gsap.set(row, { y: 20 });
+  gsap.to(row, {
+    scrollTrigger: { trigger: row, start: 'top 88%', once: true },
+    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: i * 0.1
+  });
+});
+
+const contactSplit = document.querySelector('.contact-split');
+if (contactSplit) { gsap.set(contactSplit, { y: 40 }); reveal(contactSplit, { duration: 1.0, ease: 'power3.out' }); }
+const magBtnEl = document.getElementById('magnetic-btn');
+if (magBtnEl) { gsap.set(magBtnEl, { y: 20 }); reveal(magBtnEl, { duration: 0.8, ease: 'power3.out', delay: 0.2 }); }
+const contactLinks = document.querySelector('.contact-links');
+if (contactLinks) { gsap.set(contactLinks, { y: 20 }); reveal(contactLinks, { duration: 0.8, ease: 'power3.out', delay: 0.35 }); }
+
+if (magBtnEl) {
+  magBtnEl.addEventListener('mousemove', e => {
+    const r = magBtnEl.getBoundingClientRect();
+    const dx = (e.clientX - (r.left + r.width  / 2)) * 0.35;
+    const dy = (e.clientY - (r.top  + r.height / 2)) * 0.35;
+    gsap.to(magBtnEl, { x: dx, y: dy, duration: 0.3, ease: 'power2.out' });
+  });
+  magBtnEl.addEventListener('mouseleave', () => {
+    gsap.to(magBtnEl, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1,0.4)' });
+  });
+}
+</script>
+</body>
+</html>
+onUpdate() { el.textContent = Math.round(obj.val); }
       });
     }
   });
